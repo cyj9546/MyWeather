@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by 26244 on 2018/9/3.
+ * Created by cyj on 2019/3/29.
  */
 //自定义对话框
 public class MyweatherDialog extends Dialog{
