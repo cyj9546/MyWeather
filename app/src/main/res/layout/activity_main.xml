@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_main"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:background="@mipmap/weather"
+    android:scrollbars="none"
+    tools:context=".Activity.MainActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/city_name"
+        tools:text="城市"
+        android:textSize="25dp"/>
+    <ImageView
+        android:id="@+id/img_shuaxin"
+        android:layout_toRightOf="@+id/city_name"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shuaxin"/>
+    <Button
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/img_shuaxin"
+        android:minHeight="0dp"
+        android:id="@+id/btn_select"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:textColor="#ffffff"
+        android:background="@drawable/bth_background"
+        android:text="切换城市"/>
+    <Button
+        android:id="@+id/five"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentRight="true"
+        android:textColor="#ffffff"
+        android:minHeight="0dp"
+        android:text="未来七天"
+        android:onClick="open"
+        android:textSize="20dp"
+        android:background="@drawable/bth_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/g_date"
+        android:layout_below="@+id/city_name"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        tools:text="公历"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="#ffffff"
+    android:textSize="20sp"
+    android:id="@+id/week"
+    android:layout_marginLeft="10dp"
+    android:layout_toRightOf="@+id/g_date"
+    android:layout_below="@+id/city_name"
+    android:text="星期"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/n_data"
+        android:layout_below="@+id/g_date"
+        android:textColor="#ffffff"
+        android:textSize="16dp"
+        tools:text="农历"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/temperature"
+        android:gravity="bottom"
+        android:layout_below="@+id/n_data"
+        android:textColor="#ffffff"
+        android:textSize="40sp"
+        android:layout_marginTop="15dp"
+        tools:text="温度℃"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@+id/temperature"
+        android:id="@+id/weather"
+        android:gravity="bottom"
+        android:layout_below="@+id/n_data"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="15dp"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        tools:text="天气"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/win_direct"
+        android:layout_below="@+id/weather"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        tools:text="风向"/>direct
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/quality"
+        android:layout_below="@+id/weather"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:layout_alignParentRight="true"
+        tools:text="空气质量"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_below="@+id/quality"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:background="#56000000">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/jianyi"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:text="出行建议"/>
+    <include layout="@layout/zhishu_item"/>
+    </LinearLayout>
+    
+    
+</RelativeLayout>
+
+
+</ScrollView>

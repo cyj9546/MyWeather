@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/activity_main">
+<include layout="@layout/line_item"/>
+    <TextView
+        android:id="@+id/chuanyi"
+        tools:text="穿衣指数"
+        style="@style/text_lianxi" />
+    <TextView
+        android:id="@+id/chuanyi_jy"
+        tools:text="建议"
+        style="@style/text_lianxi" />
+    <TextView
+        android:id="@+id/kongtiao"
+        tools:text="空调指数"
+        style="@style/text_lianxi" />
+    <TextView
+        android:id="@+id/kongtiao_jy"
+        tools:text="建议"
+        style="@style/text_lianxi" />
+    <TextView
+        android:id="@+id/ganmao"
+        tools:text="感冒指数"
+        style="@style/text_lianxi" />
+    <TextView
+        android:id="@+id/ganmao_jy"
+        tools:text="建议"
+        style="@style/text_lianxi" />
+    <TextView
+        android:id="@+id/xiche"
+        tools:text="洗车指数"
+        style="@style/text_lianxi" />
+    <TextView
+        android:id="@+id/xiche_jy"
+        tools:text="建议"
+        style="@style/text_lianxi" />
+
+    <TextView
+        android:id="@+id/yudong"
+        tools:text="运动指数"
+        style="@style/text_lianxi" />
+    <TextView
+        android:id="@+id/yudong_jy"
+        tools:text="建议"
+        style="@style/text_lianxi" />
+
+    <TextView
+        android:id="@+id/ziwaixian"
+        tools:text="紫外线指数"
+        style="@style/text_lianxi" />
+    <TextView
+        android:id="@+id/ziwaixian_jy"
+        tools:text="建议"
+        style="@style/text_lianxi" />
+
+
+
+</LinearLayout>
