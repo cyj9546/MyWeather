@@ -95,6 +95,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
         android:layout_toRightOf="@+id/temperature"
         android:id="@+id/weather"
         android:gravity="bottom"
@@ -102,6 +103,17 @@
         android:textColor="#ffffff"
         android:layout_marginBottom="15dp"
         android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        tools:text="天气"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@+id/weather"
+        android:id="@+id/imag_icon"
+
+        android:gravity="bottom"
+        android:layout_below="@+id/n_data"
+        android:layout_marginBottom="15dp"
         android:layout_marginTop="15dp"
         tools:text="天气"/>
 

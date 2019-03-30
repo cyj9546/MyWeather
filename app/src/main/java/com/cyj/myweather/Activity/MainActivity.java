@@ -26,6 +26,7 @@ import android.widget.Toast;
 
 import com.cyj.myweather.Dialog.MyweatherDialog;
 import com.cyj.myweather.Callback.OnResponse;
+import com.cyj.myweather.MyApp.MyApplication;
 import com.cyj.myweather.R;
 import com.cyj.myweather.Request.BaseRequest;
 import com.cyj.myweather.Bean.WeatherBean;
@@ -75,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (msg.what == 1) {
                     img_shuaxin.clearAnimation();
                     RequestWeather(city_name.getText().toString());
+                    if (MyApplication.isNetworkConnected(MainActivity.this))
                      Toast.makeText(MainActivity.this, "刷新成功", Toast.LENGTH_SHORT).show();
                 }
                 super.handleMessage(msg);
@@ -83,7 +85,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         initView();
-        RequestWeather("广州");
+        try {
+            RequestWeather("广州");
+        }catch (Exception e){
+
+        }
     }
 
 
@@ -91,8 +97,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         String str=intent.getStringExtra("CityName");
-        RequestWeather(str);
-        Log.d("CYJ",str);
+
+        try {
+            RequestWeather(str);
+        }catch (Exception e){
+
+        }
     }
 
 

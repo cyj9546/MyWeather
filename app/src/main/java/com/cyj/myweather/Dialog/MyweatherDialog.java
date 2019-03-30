@@ -50,23 +50,28 @@ public class MyweatherDialog extends Dialog{
 
     private void initData() {
         views=new ArrayList<>();
-        for (int i=0;i<list.size();i++){
-             View view=inflater.inflate(R.layout.item,null);
-              TextView b_t=view.findViewById(R.id.b_t);
-              TextView n_t=view.findViewById(R.id.n_t);
-              TextView b_w=view.findViewById(R.id.b_w);
-              TextView n_w=view.findViewById(R.id.n_w);
-              TextView date=view.findViewById(R.id.f_date);
-              TextView week=view.findViewById(R.id.f_week);
-            WeatherBean.ResultBean.DailyBean entiy=list.get(i);
-            b_t.setText("最高"+entiy.getDay().getTemphigh()+"℃");
-            b_w.setText(entiy.getDay().getWeather());
-            n_t.setText("最低"+entiy.getNight().getTemplow()+"℃");
-            n_w.setText(entiy.getNight().getWeather());
-            date.setText(""+entiy.getDate());
-            week.setText(""+entiy.getWeek());
-            views.add(view);
+        try {
+            for (int i=0;i<list.size();i++){
+                View view=inflater.inflate(R.layout.item,null);
+                TextView b_t=view.findViewById(R.id.b_t);
+                TextView n_t=view.findViewById(R.id.n_t);
+                TextView b_w=view.findViewById(R.id.b_w);
+                TextView n_w=view.findViewById(R.id.n_w);
+                TextView date=view.findViewById(R.id.f_date);
+                TextView week=view.findViewById(R.id.f_week);
+                WeatherBean.ResultBean.DailyBean entiy=list.get(i);
+                b_t.setText("最高"+entiy.getDay().getTemphigh()+"℃");
+                b_w.setText(entiy.getDay().getWeather());
+                n_t.setText("最低"+entiy.getNight().getTemplow()+"℃");
+                n_w.setText(entiy.getNight().getWeather());
+                date.setText(""+entiy.getDate());
+                week.setText(""+entiy.getWeek());
+                views.add(view);
+            }
+        }catch (Exception e){
+
         }
+
         pager.setAdapter(new WeatherAdapter(views));
     }
 

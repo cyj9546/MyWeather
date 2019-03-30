@@ -1,5 +1,6 @@
 package com.cyj.myweather.Util;
 
+import android.net.ConnectivityManager;
 import android.os.Handler;
 import android.os.Looper;
 
@@ -12,6 +13,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class NetUtil {
+
     private static Handler handler=new Handler(Looper.getMainLooper());
     public static void sendpost(final String url , final OnResponse response){
             new Thread(){

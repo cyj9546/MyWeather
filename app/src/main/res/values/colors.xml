@@ -3,5 +3,6 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="futer_bg">#c3fc51</color>
+    <color name="futer_bg">#181717</color>
+    <color name="tv_color">#f9e400</color>
 </resources>
